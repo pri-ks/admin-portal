@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/admin-portal/static/css/main.da6d3f96.css",
-    "main.js": "/admin-portal/static/js/main.bbb8f439.js",
-    "static/media/no-data.png": "/admin-portal/static/media/no-data.970b8ced2ef21e2504bc.png",
-    "static/media/wip.png": "/admin-portal/static/media/wip.b3c0d0dba3aab400963a.png",
-    "static/media/loader.gif": "/admin-portal/static/media/loader.f0eae56e488a8d96e447.gif",
-    "static/media/error-bg.jpg": "/admin-portal/static/media/error-bg.b660b8e17a3281cbaa9d.jpg",
-    "static/media/bg-login.png": "/admin-portal/static/media/bg-login.19d237757b962c70ed64.png",
-    "index.html": "/admin-portal/index.html",
-    "main.da6d3f96.css.map": "/admin-portal/static/css/main.da6d3f96.css.map",
-    "main.bbb8f439.js.map": "/admin-portal/static/js/main.bbb8f439.js.map"
+    "main.css": "/https://github.com/pri-ks/admin-portal/static/css/main.da6d3f96.css",
+    "main.js": "/https://github.com/pri-ks/admin-portal/static/js/main.4347361a.js",
+    "static/media/no-data.png": "/https://github.com/pri-ks/admin-portal/static/media/no-data.970b8ced2ef21e2504bc.png",
+    "static/media/wip.png": "/https://github.com/pri-ks/admin-portal/static/media/wip.b3c0d0dba3aab400963a.png",
+    "static/media/loader.gif": "/https://github.com/pri-ks/admin-portal/static/media/loader.f0eae56e488a8d96e447.gif",
+    "static/media/error-bg.jpg": "/https://github.com/pri-ks/admin-portal/static/media/error-bg.b660b8e17a3281cbaa9d.jpg",
+    "static/media/bg-login.png": "/https://github.com/pri-ks/admin-portal/static/media/bg-login.19d237757b962c70ed64.png",
+    "index.html": "/https://github.com/pri-ks/admin-portal/index.html",
+    "main.da6d3f96.css.map": "/https://github.com/pri-ks/admin-portal/static/css/main.da6d3f96.css.map",
+    "main.4347361a.js.map": "/https://github.com/pri-ks/admin-portal/static/js/main.4347361a.js.map"
   },
   "entrypoints": [
     "static/css/main.da6d3f96.css",
-    "static/js/main.bbb8f439.js"
+    "static/js/main.4347361a.js"
   ]
 }
