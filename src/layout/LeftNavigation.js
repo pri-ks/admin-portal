@@ -12,7 +12,7 @@ function LeftNavigation() {
             </div>
             <ul>
                 <li>
-                    <NavLink to="/" className={({ isActive }) => (isActive ? classes.active : null )}><FaHome />Dashboard</NavLink>
+                    <NavLink to="/dashboard" className={({ isActive }) => (isActive ? classes.active : null )}><FaHome />Dashboard</NavLink>
                 </li>
                 <li>
                     <NavLink to="/branch" className={({ isActive }) => (isActive ? classes.active : null )}><FaHotel />Branch</NavLink>
