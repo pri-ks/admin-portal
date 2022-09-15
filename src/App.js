@@ -30,7 +30,7 @@ function App() {
                       <main>
                           <Routes>
                             <Route path='/' exact element={<Navigate to="/dashboard" />}></Route>
-                            <Route path='/dashboard' element={<Dashboard />}></Route>
+                            <Route path='/dashboard' element={<Dashboard/>}></Route>
                             <Route path='/branch' element={<Branches />}></Route>
                             <Route path='/inventory/*' element={<Inventory />}></Route>
                             <Route path='/orders' element={<Orders />}></Route>
