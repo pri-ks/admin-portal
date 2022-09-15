@@ -1,0 +1,70 @@
+.product-box {
+    background-color: #fff;
+    border-radius: 10px;
+    list-style: none;
+    box-shadow: 1px 1px 5px 1px #eee;
+    padding: 15px;
+    position: relative;
+    word-wrap: break-word;
+}
+.product-img {
+    background-repeat: no-repeat;
+    background-size: calc(100% - 1.5rem);
+    background-position: center center;
+}
+.product-box h5 {
+    text-transform: capitalize;
+    color: #333;
+    font-weight: 600;
+}
+.product-box p {
+    color: #888;
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.product-box span {
+    padding: 3px 15px;
+    border-radius: 20px;
+    background-color: #7f84cd;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.product-box h6 {
+    margin: 10px 0 50px;
+}
+.product-box img {
+    max-width: 100%;
+}
+.editbtn, .deletebtn {
+    width: 90px;
+    position: absolute;
+    bottom: 15px;
+    border: 0;
+    border-radius: 5px;
+    padding: 9px 10px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.2s all ease-in-out;
+    color: #fff;
+}
+.editbtn {
+    right: 120px;
+    background-color: #fdab58;
+}
+.editbtn:hover {
+    box-shadow: 0px 1px 8px 2px #cb834e;
+}
+.deletebtn {
+    right: 15px;
+    background-color: #ff6666;
+}
+.deletebtn:hover {
+    box-shadow: 0px 1px 8px 2px #e04949;
+}
+.editbtn svg, .deletebtn svg{
+    vertical-align: bottom;
+}

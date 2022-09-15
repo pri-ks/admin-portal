@@ -1,0 +1,48 @@
+header {
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px 1px #aacfe1;
+    background-color: #d8ecf6;
+    position: relative;
+}
+header h3 {
+    margin: 0;
+}
+.icon-wrap {
+    padding: 0;
+    margin: 0;
+}
+.icon-wrap li {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 6px 7px;
+    line-height: 21px;
+    background: linear-gradient(-45deg, #7e46c3 10%, #5edfeb);
+}
+.sublist {
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    right: 20px;
+    background: #7f84cd;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px 2px #eee;
+}
+.sublist:before {
+    content: "";
+    border-bottom: 13px solid #7f84cd;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    right: 6px;
+}
+.sublist > div {
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #fff;
+}
+.userprofile:hover .sublist {
+    display: block;
+}

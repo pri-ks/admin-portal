@@ -1,0 +1,24 @@
+.section-wrap {
+    padding: 0px 20px;
+}
+
+.section-wrap > button {
+    padding: 9px 13px;
+    border-radius: 20px;
+    -webkit-appearance: none;
+    font-size: 14px;
+    background-color: #5da9ce;
+    margin: 15px 0;
+    border: 0;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.2s background ease-in-out;
+}
+.section-wrap > button:hover {
+    background-color: #7f84cd;
+}
+.section-wrap ul {
+    padding: 0 10px;
+    list-style: none;
+    clear: both;
+}
