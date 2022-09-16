@@ -11,6 +11,7 @@ import EditCategory from './EditCategory';
 import NoDataFound from '../../../UI/NoDataFound';
 import ErrorMessage from '../../../UI/ErrorMessage';
 import Loader from '../../../UI/Loader';
+import { allCategories } from '../../../JSON/categoryData';
 
 function Categories() {
     const [categories, setCategories] = useState([]);
@@ -24,7 +25,8 @@ function Categories() {
 
     const getCategories = async () => {
         try {
-          const response = await getData('/itemCategory/findAll');
+          //const response = await getData('/itemCategory/findAll');
+          const response = allCategories;
           const categoryData = [];
           for (const item of response.data) {
             categoryData.push({
@@ -96,7 +98,7 @@ function Categories() {
             updatedCategory.image = encodedFile;
           }
           updatedCategory.id = CategoryId;
-          await postData('/itemCategory/updateItemCategory', updatedCategory);
+          //await postData('/itemCategory/updateItemCategory', updatedCategory);
           const editedCategory = categories.find(b => b.id === CategoryId);
           Object.assign(editedCategory, updatedCategory);
           toast.warn('Category updated successfully');
@@ -115,7 +117,7 @@ function Categories() {
     const onDeleteCategory = async () => {
       setDeleteModalOpen(false);
       try {
-        await deleteData(`/itemCategory/deleteItemCategory/${CategoryId}`);
+        //await deleteData(`/itemCategory/deleteItemCategory/${CategoryId}`);
         const categoryData = categories.filter(b => b.id !== CategoryId);
         setCategories(categoryData);
         toast.error('Category deleted successfully');
@@ -139,8 +141,9 @@ function Categories() {
           try {
             const encodedFile = await base64Encoded(categoryData.image);
             categoryData.image = encodedFile;
-            const response = await postData('/itemCategory/createItemCategory', categoryData);
-            categoryData.id = response.data.id;
+            //const response = await postData('/itemCategory/createItemCategory', categoryData);
+            //categoryData.id = response.data.id;
+            categoryData.id = Math.floor(Math.random() * 100);
             categories.push(categoryData);
             setCategories(categories);
             toast.success('New Category added successfully');

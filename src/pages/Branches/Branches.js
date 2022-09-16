@@ -11,6 +11,7 @@ import EditBranch from './EditBranch';
 import NoDataFound from '../../UI/NoDataFound';
 import ErrorMessage from '../../UI/ErrorMessage';
 import Loader from '../../UI/Loader';
+import { allBranches } from '../../JSON/branchData';
 
 function Branches() {
     const [branches, setBranches] = useState([]);
@@ -24,7 +25,8 @@ function Branches() {
 
     const getBranches = async () => {
         try {
-          const response = await getData('/branch/findAll');
+          //const response = await getData('/branch/findAll');
+          const response = allBranches;
           const branchData = [];
           for (const item of response.data) {
             branchData.push({
@@ -96,7 +98,7 @@ function Branches() {
             updatedBranch.image = encodedFile;
           }
           updatedBranch.id = BranchId;
-          await postData('/branch/updateBranch', updatedBranch);
+          //await postData('/branch/updateBranch', updatedBranch);
           const editedBranch = branches.find(b => b.id === BranchId);
           Object.assign(editedBranch, updatedBranch);
           toast.warn('Branch edited successfully');
@@ -115,7 +117,7 @@ function Branches() {
     const onDeleteBranch = async () => {
       setDeleteModalOpen(false);
       try {
-        await deleteData(`/branch/deleteBranch/${BranchId}`);
+        //await deleteData(`/branch/deleteBranch/${BranchId}`);
         const branchData = branches.filter(b => b.id !== BranchId);
         setBranches(branchData);
         toast.error('Branch deleted successfully');
@@ -139,8 +141,9 @@ function Branches() {
           try {
             const encodedFile = await base64Encoded(branchData.image);
             branchData.image = encodedFile;
-            const response = await postData('/branch/createBranch', branchData);
-            branchData.id = response.data.id;
+            //const response = await postData('/branch/createBranch', branchData);
+            //branchData.id = response.data.id;
+            branchData.id = Math.floor(Math.random() * 100);
             branches.push(branchData);
             setBranches(branches);
             toast.success('New Branch added successfully');

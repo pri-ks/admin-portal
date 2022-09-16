@@ -11,6 +11,7 @@ import EditPromotion from './EditPromotion';
 import NoDataFound from '../../UI/NoDataFound';
 import ErrorMessage from '../../UI/ErrorMessage';
 import Loader from '../../UI/Loader';
+import { allPromotions } from '../../JSON/promotionData';
 
 function Promotions() {
     const [promotions, setPromotions] = useState([]);
@@ -24,7 +25,8 @@ function Promotions() {
 
     const getPromotions = async () => {
         try {
-          const response = await getData('/promotion/findAll');
+          //const response = await getData('/promotion/findAll');
+          const response = allPromotions;
           const promotionData = [];
           for (const item of response.data) {
             promotionData.push({
@@ -97,7 +99,7 @@ function Promotions() {
             updatedPromotion.image = encodedFile;
           }
           updatedPromotion.id = PromotionId;
-          await postData('/promotion/updatePromotion', updatedPromotion);
+          //await postData('/promotion/updatePromotion', updatedPromotion);
           const editedPromotion = promotions.find(b => b.id === PromotionId);
           Object.assign(editedPromotion, updatedPromotion);
           toast.warn('Promotion updated successfully');
@@ -116,7 +118,7 @@ function Promotions() {
     const onDeletePromotion = async () => {
       setDeleteModalOpen(false);
       try {
-        await deleteData(`/promotion/deletePromotion/${PromotionId}`);
+        //await deleteData(`/promotion/deletePromotion/${PromotionId}`);
         const promotionData = promotions.filter(b => b.id !== PromotionId);
         setPromotions(promotionData);
         toast.error('Promotion deleted successfully');
@@ -140,8 +142,9 @@ function Promotions() {
           try {
             const encodedFile = await base64Encoded(promotionData.image);
             promotionData.image = encodedFile;
-            const response = await postData('/promotion/createPromotion', promotionData);
-            promotionData.id = response.data.id;
+            //const response = await postData('/promotion/createPromotion', promotionData);
+            //promotionData.id = response.data.id;
+            promotionData.id = Math.floor(Math.random() * 100);
             promotions.push(promotionData);
             setPromotions(promotions);
             toast.success('New Promotion added successfully');

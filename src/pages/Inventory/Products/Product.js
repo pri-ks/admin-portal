@@ -11,7 +11,6 @@ const Product = (props) => {
     props.onEdit(props.id);
   }
 
-
   return (
     <li className="col col-6 mb-4">
       <div className={classes['product-box']}>

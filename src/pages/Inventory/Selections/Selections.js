@@ -11,6 +11,7 @@ import EditSelection from './EditSelection';
 import NoDataFound from '../../../UI/NoDataFound';
 import ErrorMessage from '../../../UI/ErrorMessage';
 import Loader from '../../../UI/Loader';
+import { allSelections } from '../../../JSON/selectionData';
 
 function Selections() {
     const [selections, setSelections] = useState([]);
@@ -24,7 +25,8 @@ function Selections() {
 
     const getSelections = async () => {
         try {
-          const response = await getData('/itemSelection/findAll');
+          //const response = await getData('/itemSelection/findAll');
+          const response = allSelections;
           const selectionData = [];
           for (const item of response.data) {
             selectionData.push({
@@ -98,7 +100,7 @@ function Selections() {
             updatedSelection.image = encodedFile;
           }
           updatedSelection.id = SelectionId;
-          await postData('/itemSelection/updateItemSelection', updatedSelection);
+          //await postData('/itemSelection/updateItemSelection', updatedSelection);
           const editedSelection = selections.find(b => b.id === SelectionId);
           Object.assign(editedSelection, updatedSelection);
           toast.warn('Selection updated successfully');
@@ -117,7 +119,7 @@ function Selections() {
     const onDeleteSelection = async () => {
       setDeleteModalOpen(false);
       try {
-        await deleteData(`/itemSelection/deleteItemSelection/${SelectionId}`);
+        //await deleteData(`/itemSelection/deleteItemSelection/${SelectionId}`);
         const selectionData = selections.filter(b => b.id !== SelectionId);
         setSelections(selectionData);
         toast.error('Selection deleted successfully');
@@ -141,8 +143,9 @@ function Selections() {
           try {
             const encodedFile = await base64Encoded(selectionData.image);
             selectionData.image = encodedFile;
-            const response = await postData('/itemSelection/createItemSelection', selectionData);
-            selectionData.id = response.data.id;
+            //const response = await postData('/itemSelection/createItemSelection', selectionData);
+            //selectionData.id = response.data.id;
+            selectionData.id = Math.floor(Math.random() * 100);
             selections.push(selectionData);
             setSelections(selections);
             toast.success('New Selection added successfully');

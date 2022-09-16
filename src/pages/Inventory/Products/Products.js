@@ -11,6 +11,8 @@ import EditProduct from './EditProduct';
 import NoDataFound from '../../../UI/NoDataFound';
 import ErrorMessage from '../../../UI/ErrorMessage';
 import Loader from '../../../UI/Loader';
+import { allProducts } from '../../../JSON/productData';
+import { categoryList } from '../../../JSON/categoryData';
 
 function Products() {
     const [products, setProducts] = useState([]);
@@ -25,7 +27,8 @@ function Products() {
 
     const getProducts = async () => {
         try {
-          const response = await getData('/item/findAll');
+          //const response = await getData('/item/findAll');
+          const response = allProducts;
           const productData = [];
           for (const item of response.data) {
             productData.push({
@@ -49,7 +52,8 @@ function Products() {
 
     const getCategories = async () => {
         try {
-          const response = await getData('/itemCategory/findAll');
+          //const response = await getData('/itemCategory/findAll');
+          const response = categoryList;
           const categoryData = [];
           for (const item of response.data) {
             categoryData.push({
@@ -121,7 +125,7 @@ function Products() {
             updatedProduct.image = encodedFile;
           }
           updatedProduct.id = ProductId;
-          await postData('/item/updateItem', updatedProduct);
+          //await postData('/item/updateItem', updatedProduct);
           const editedProduct = products.find(b => b.id === ProductId);
           Object.assign(editedProduct, updatedProduct);
           toast.warn('Product updated successfully');
@@ -140,7 +144,7 @@ function Products() {
     const onDeleteProduct = async () => {
       setDeleteModalOpen(false);
       try {
-        await deleteData(`/item/deleteItem/${ProductId}`);
+        //await deleteData(`/item/deleteItem/${ProductId}`);
         const productData = products.filter(b => b.id !== ProductId);
         setProducts(productData);
         toast.error('Product deleted successfully');
@@ -164,8 +168,9 @@ function Products() {
           try {
             const encodedFile = await base64Encoded(productData.image);
             productData.image = encodedFile;
-            const response = await postData('/item/createItem', productData);
-            productData.id = response.data.id;
+            //const response = await postData('/item/createItem', productData);
+            //productData.id = response.data.id;
+            productData.id = Math.floor(Math.random() * 100);
             products.push(productData);
             setProducts(products);
             toast.success('New Product added successfully');
