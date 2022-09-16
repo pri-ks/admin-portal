@@ -1,18 +1,34 @@
 {
   "files": {
     "main.css": "/admin-portal/static/css/main.da6d3f96.css",
-    "main.js": "/admin-portal/static/js/main.016c37d2.js",
+    "main.js": "/admin-portal/static/js/main.abfafba5.js",
+    "static/media/product2.jpg": "/admin-portal/static/media/product2.d007a06cba49ccc2a54a.jpg",
+    "static/media/product5.jpg": "/admin-portal/static/media/product5.9d93447baa2c7e6d29ed.jpg",
+    "static/media/branch1.jpg": "/admin-portal/static/media/branch1.056424cd9b4b21c8a2f5.jpg",
+    "static/media/product6.jpg": "/admin-portal/static/media/product6.06e411e45e7cab2402fe.jpg",
+    "static/media/promo2.jpg": "/admin-portal/static/media/promo2.694a3f643cc72ab643b2.jpg",
+    "static/media/promo1.jpg": "/admin-portal/static/media/promo1.4960c1199eb008bd71d3.jpg",
+    "static/media/branch3.jpg": "/admin-portal/static/media/branch3.3bd60711fb1ee7a5ccc1.jpg",
+    "static/media/branch2.jpg": "/admin-portal/static/media/branch2.4c086c5f67cfb16201dd.jpg",
+    "static/media/category2.jpg": "/admin-portal/static/media/category2.0ecf9e3b8ee4c1e7c565.jpg",
+    "static/media/product4.jpg": "/admin-portal/static/media/product4.668eb7a66b78a5a709f0.jpg",
+    "static/media/category1.jpg": "/admin-portal/static/media/category1.fa48e68be231ddb208ba.jpg",
+    "static/media/category3.jpg": "/admin-portal/static/media/category3.d574fb955aa581c50d23.jpg",
     "static/media/no-data.png": "/admin-portal/static/media/no-data.970b8ced2ef21e2504bc.png",
+    "static/media/selection2.jpg": "/admin-portal/static/media/selection2.ebf2402780c094e858ed.jpg",
     "static/media/wip.png": "/admin-portal/static/media/wip.b3c0d0dba3aab400963a.png",
     "static/media/loader.gif": "/admin-portal/static/media/loader.f0eae56e488a8d96e447.gif",
+    "static/media/product1.jpg": "/admin-portal/static/media/product1.4f57e12e069793a9679b.jpg",
+    "static/media/product3.jpg": "/admin-portal/static/media/product3.7fbacbfff75fe653e6c3.jpg",
     "static/media/error-bg.jpg": "/admin-portal/static/media/error-bg.b660b8e17a3281cbaa9d.jpg",
+    "static/media/selection1.jpg": "/admin-portal/static/media/selection1.b909d3675371a37808b0.jpg",
     "static/media/bg-login.png": "/admin-portal/static/media/bg-login.19d237757b962c70ed64.png",
     "index.html": "/admin-portal/index.html",
     "main.da6d3f96.css.map": "/admin-portal/static/css/main.da6d3f96.css.map",
-    "main.016c37d2.js.map": "/admin-portal/static/js/main.016c37d2.js.map"
+    "main.abfafba5.js.map": "/admin-portal/static/js/main.abfafba5.js.map"
   },
   "entrypoints": [
     "static/css/main.da6d3f96.css",
-    "static/js/main.016c37d2.js"
+    "static/js/main.abfafba5.js"
   ]
 }
